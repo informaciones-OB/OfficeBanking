@@ -1,0 +1,1 @@
+self.__next_f.push([1,"10:I[541852,[\"/_next/static/chunks/88a6e55b2268befc.js\",\"/_next/static/chunks/b9f77a9e35521e52.js\",\"/_next/static/chunks/72dc63ceea4a8db6.js\",\"/_next/static/chunks/82cd73cb10b0643e.js\"],\"default\",1]\ne:T809,"])

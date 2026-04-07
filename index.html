@@ -3,8 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Office Banking - Gestión Empresarial</title>
+    <meta name="description" content="Office Banking - Plataforma de banca digital para empresas">
+    <title>Office Banking - Gestión Empresarial Digital</title>
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- SWIPER CSS CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CUSTOM FONTS - SANTANDER -->
+    <style>
+        @font-face {
+            font-family: 'SantanderHeadline';
+            src: url('assets/SantanderHeadlineW05-Light.woff2') format('woff2'),
+                 url('assets/SantanderHeadlineW05-Light.woff') format('woff');
+            font-weight: 300;
+        }
+
+        @font-face {
+            font-family: 'SantanderHeadline';
+            src: url('assets/SantanderHeadlineW05-Rg.woff2') format('woff2'),
+                 url('assets/SantanderHeadlineW05-Rg.woff') format('woff');
+            font-weight: 400;
+        }
+
+        @font-face {
+            font-family: 'SantanderIcons';
+            src: url('assets/SantanderIcons.woff2') format('woff2'),
+                 url('assets/SantanderIcons.woff') format('woff'),
+                 url('assets/SantanderIcons.ttf') format('truetype');
+        }
+    </style>
+    
+    <!-- ESTILOS PRINCIPALES -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/styles-3EV646VE.css">
+    
+    <!-- ESTILOS PERSONALIZADOS -->
     <style>
         * {
             margin: 0;
@@ -17,7 +59,7 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             color: #333;
             background-color: #f8f9fa;
             line-height: 1.6;
@@ -31,29 +73,33 @@
             background: white;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
+            padding: 1rem 2rem;
         }
 
         .header-container {
             max-width: 1440px;
             margin: 0 auto;
-            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #0066cc;
-            text-decoration: none;
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            text-decoration: none;
         }
 
-        .logo:hover {
-            color: #0052a3;
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .logo span {
+            font-weight: 700;
+            color: #0066cc;
+            font-size: 1.2rem;
         }
 
         .nav-desktop {
@@ -118,14 +164,12 @@
             gap: 5px;
             background: none;
             border: none;
-            font-size: 1.5rem;
         }
 
         .burger-menu span {
             width: 25px;
             height: 3px;
             background: #0066cc;
-            transition: all 0.3s;
             border-radius: 2px;
         }
 
@@ -170,6 +214,7 @@
         }
 
         .slide-text h1 {
+            font-family: 'SantanderHeadline', sans-serif;
             font-size: 3rem;
             font-weight: 300;
             line-height: 1.2;
@@ -211,6 +256,7 @@
             transition: all 0.3s;
             text-decoration: none;
             font-size: 1rem;
+            font-family: inherit;
         }
 
         .cta-primary:hover {
@@ -222,12 +268,9 @@
         .slide-image {
             width: 100%;
             height: 500px;
-            background: linear-gradient(135deg, #cce5ff 0%, #99ccff 100%);
+            background-size: cover;
+            background-position: center;
             border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 5rem;
             animation: float 3s ease-in-out infinite;
         }
 
@@ -260,10 +303,6 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .swiper-button-prev:after, .swiper-button-next:after {
-            font-size: 20px;
-        }
-
         @media (max-width: 768px) {
             .slide-content {
                 grid-template-columns: 1fr;
@@ -274,7 +313,6 @@
             }
             .slide-image {
                 height: 300px;
-                font-size: 3rem;
             }
         }
 
@@ -364,12 +402,9 @@
         .featured-image {
             width: 100%;
             height: 450px;
-            background: linear-gradient(135deg, #cce5ff 0%, #99ccff 100%);
+            background-size: cover;
+            background-position: center;
             border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
             animation: fadeInUp 0.8s ease;
         }
 
@@ -378,6 +413,7 @@
         }
 
         .featured-content h2 {
+            font-family: 'SantanderHeadline', sans-serif;
             font-size: 2.5rem;
             font-weight: 300;
             line-height: 1.3;
@@ -416,7 +452,6 @@
             }
             .featured-image {
                 height: 300px;
-                font-size: 2.5rem;
             }
         }
 
@@ -428,6 +463,7 @@
         }
 
         .section-title {
+            font-family: 'SantanderHeadline', sans-serif;
             text-align: center;
             font-size: 2.8rem;
             font-weight: 300;
@@ -470,11 +506,8 @@
         .article-image {
             width: 100%;
             height: 200px;
-            background: linear-gradient(135deg, #cce5ff 0%, #99ccff 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
+            background-size: cover;
+            background-position: center;
         }
 
         .article-content {
@@ -568,21 +601,15 @@
             color: #999;
         }
 
-        /* ==================== ANIMATIONS ==================== */
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
+        /* ==================== UTILITY ==================== */
         .animate-on-scroll {
             opacity: 0;
             animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .app-store-badge {
+            height: 40px;
+            margin-right: 1rem;
         }
     </style>
 </head>
@@ -591,10 +618,11 @@
     <header class="header">
         <div class="header-container">
             <a href="#" class="logo">
-                <span>🏦</span> Office Banking
+                <img src="imagenes/Logo-OB.svg" alt="Office Banking" onerror="this.style.display='none'">
+                <span>Office Banking</span>
             </a>
-            <nav class="nav-desktop">
-                <ul style="list-style: none; display: flex; gap: 2rem;">
+            <nav>
+                <ul class="nav-desktop">
                     <li><a href="#productos">Productos</a></li>
                     <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#soporte">Soporte</a></li>
@@ -602,7 +630,7 @@
             </nav>
             <div class="header-actions">
                 <button class="login-btn" onclick="handleLogin()">
-                    <span>👤</span> Ingresar
+                    👤 Ingresar
                 </button>
                 <button class="burger-menu" onclick="toggleMobileMenu()">
                     <span></span><span></span><span></span>
@@ -615,22 +643,20 @@
     <section class="hero">
         <div class="swiper swiper-hero" id="heroSwiper">
             <div class="swiper-wrapper">
-                <!-- Slide 1 -->
+                <!-- Slide 1: App Office Banking -->
                 <div class="swiper-slide swiper-slide-hero">
                     <div class="slide-content">
                         <div class="slide-text">
                             <div class="slide-kicker">App Office Banking</div>
                             <h1><span style="font-weight: 300;">Enciende la llama</span> <strong>que hay en ti</strong></h1>
                             <p class="slide-description">Toda la gestión de tu empresa en tu mano. Acceso completo desde cualquier dispositivo.</p>
-                            <button class="cta-primary" onclick="scrollToSection('#officebanking-app')">
-                                Conoce más → 
-                            </button>
+                            <button class="cta-primary" onclick="scrollToSection('#officebanking-app')">Conoce más →</button>
                         </div>
-                        <div class="slide-image">📱</div>
+                        <div class="slide-image" style="background-image: url('imagenes/AppOb092025_2.jpg')"></div>
                     </div>
                 </div>
 
-                <!-- Slide 2 -->
+                <!-- Slide 2: Beneficios Empresas -->
                 <div class="swiper-slide swiper-slide-hero">
                     <div class="slide-content">
                         <div class="slide-text">
@@ -639,11 +665,11 @@
                             <p class="slide-description">Acceso exclusivo a promociones y ventajas especiales para tu negocio.</p>
                             <button class="cta-primary">Ver Beneficios →</button>
                         </div>
-                        <div class="slide-image">🎁</div>
+                        <div class="slide-image" style="background-image: url('imagenes/beneficiosEmpresas.jpg')"></div>
                     </div>
                 </div>
 
-                <!-- Slide 3 -->
+                <!-- Slide 3: Tarjetas Empresariales -->
                 <div class="swiper-slide swiper-slide-hero">
                     <div class="slide-content">
                         <div class="slide-text">
@@ -652,11 +678,11 @@
                             <p class="slide-description">Opciones de crédito diseñadas especialmente para empresas de todos los tamaños.</p>
                             <button class="cta-primary">Explorar Tarjetas →</button>
                         </div>
-                        <div class="slide-image">💳</div>
+                        <div class="slide-image" style="background-image: url('imagenes/tc_empresas.jpg')"></div>
                     </div>
                 </div>
 
-                <!-- Slide 4 -->
+                <!-- Slide 4: Santander X -->
                 <div class="swiper-slide swiper-slide-hero">
                     <div class="slide-content">
                         <div class="slide-text">
@@ -665,11 +691,11 @@
                             <p class="slide-description">Acceso a formación gratis, descuentos exclusivos y eventos de networking.</p>
                             <button class="cta-primary">Registrarse →</button>
                         </div>
-                        <div class="slide-image">⭐</div>
+                        <div class="slide-image" style="background-image: url('imagenes/SantanderX.jpg')"></div>
                     </div>
                 </div>
 
-                <!-- Slide 5 -->
+                <!-- Slide 5: Multinacionales -->
                 <div class="swiper-slide swiper-slide-hero">
                     <div class="slide-content">
                         <div class="slide-text">
@@ -678,12 +704,11 @@
                             <p class="slide-description">Soluciones globales para el crecimiento internacional de tu empresa.</p>
                             <button class="cta-primary">Conocer Más →</button>
                         </div>
-                        <div class="slide-image">🌍</div>
+                        <div class="slide-image" style="background-image: url('imagenes/multinacionales.jpg')"></div>
                     </div>
                 </div>
             </div>
 
-            <!-- Navigation -->
             <div class="swiper-pagination"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
@@ -729,10 +754,10 @@
     <!-- FEATURED: Work/Café -->
     <section class="featured">
         <div class="featured-grid">
-            <div class="featured-image">☕</div>
+            <div class="featured-image" style="background-image: url('imagenes/work-cafe-featured.png')"></div>
             <div class="featured-content">
                 <h2>Work <strong>/</strong> Café</h2>
-                <p>Conoce y descubre todos los beneficios que tenemos para tu empresa. Un espacio dedicado al crecimiento y networking empresarial.</p>
+                <p>Conoce y descubre todos los beneficios que tenemos para tu empresa. Un espacio dedicado al crecimiento y networking empresarial con acceso a expertos y recursos exclusivos.</p>
                 <a href="https://www.workcafe.cl/" class="cta-primary" target="_blank">Inscríbete Aquí →</a>
             </div>
         </div>
@@ -741,13 +766,17 @@
     <!-- FEATURED: App Office Banking -->
     <section class="featured" id="officebanking-app">
         <div class="featured-grid reverse">
-            <div class="featured-image">📱</div>
+            <div class="featured-image" style="background-image: url('imagenes/ob-app-featured.png')"></div>
             <div class="featured-content">
                 <h2><span style="font-weight: 300;">Toda la gestión de tu empresa</span> <strong>en tu mano</strong></h2>
-                <p>Accede a todas las herramientas de la App Office Banking. Gestión de cuentas, transferencias, pagos y mucho más desde tu smartphone.</p>
-                <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
-                    <a href="https://apps.apple.com/" class="cta-primary" target="_blank">App Store</a>
-                    <a href="https://play.google.com/" class="cta-primary" target="_blank">Google Play</a>
+                <p>Accede a todas las herramientas de la App Office Banking. Gestión de cuentas, transferencias, pagos y mucho más desde tu smartphone con seguridad garantizada.</p>
+                <div style="display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                    <a href="https://itunes.apple.com/cl/app/office-banking/id1248490706?mt=8" target="_blank">
+                        <img src="imagenes/app-store-black.svg" alt="App Store" class="app-store-badge">
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=cl.santander.app.empresas" target="_blank">
+                        <img src="imagenes/google-play-black.svg" alt="Google Play" class="app-store-badge">
+                    </a>
                 </div>
                 <a href="#" class="cta-primary">Conoce Más →</a>
             </div>
@@ -757,10 +786,10 @@
     <!-- FEATURED: Factoring -->
     <section class="featured">
         <div class="featured-grid">
-            <div class="featured-image">📊</div>
+            <div class="featured-image" style="background-image: url('imagenes/factoring.png')"></div>
             <div class="featured-content">
                 <h2><span style="font-weight: 300;">Comienza a operar</span> <strong>con nosotros</strong></h2>
-                <p>Usa tus facturas pendientes para obtener capital de trabajo. Servicio único en Chile para empresas que necesitan liquidez inmediata.</p>
+                <p>Usa tus facturas pendientes para obtener capital de trabajo inmediato. Servicio único en Chile para empresas que necesitan liquidez para crecer.</p>
                 <a href="#" class="cta-primary">Conocer Factoring →</a>
             </div>
         </div>
@@ -773,73 +802,67 @@
 
         <div class="swiper swiper-articles" id="articlesSwiper">
             <div class="swiper-wrapper">
-                <!-- Article 1 -->
                 <div class="swiper-slide" style="max-width: 350px;">
                     <div class="article-card">
-                        <div class="article-image">📈</div>
+                        <div class="article-image" style="background-image: url('imagenes/ibor-transition.png')"></div>
                         <div class="article-content">
                             <span class="article-category">Análisis</span>
                             <h3 class="article-title">IBOR Transition</h3>
                             <p class="article-desc">Fin de la tasa de referencia LIBOR y bienvenida la tasa Term SOFR para nuevas operaciones.</p>
-                            <a href="#" class="article-link">Ver más →</a>
+                            <a href="/article/transicion-ibor" class="article-link">Ver más →</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Article 2 -->
                 <div class="swiper-slide" style="max-width: 350px;">
                     <div class="article-card">
-                        <div class="article-image">🌐</div>
+                        <div class="article-image" style="background-image: url('imagenes/santander-cash-nexus.png')"></div>
                         <div class="article-content">
                             <span class="article-category">Servicios</span>
                             <h3 class="article-title">Santander Cash Nexus</h3>
                             <p class="article-desc">Donde necesites operar, te mantendremos conectado con soluciones globales integradas.</p>
-                            <a href="#" class="article-link">Ver más →</a>
+                            <a href="/article/cash-nexus" class="article-link">Ver más →</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Article 3 -->
                 <div class="swiper-slide" style="max-width: 350px;">
                     <div class="article-card">
-                        <div class="article-image">💰</div>
+                        <div class="article-image" style="background-image: url('imagenes/paga-tus-impuestos.png')"></div>
                         <div class="article-content">
                             <span class="article-category">Gestión</span>
                             <h3 class="article-title">Paga tus Impuestos</h3>
                             <p class="article-desc">Servicio rápido, sin costo y disponible las 24 horas para tus obligaciones tributarias.</p>
-                            <a href="#" class="article-link">Ver más →</a>
+                            <a href="/article/paga-tus-impuestos" class="article-link">Ver más →</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Article 4 -->
                 <div class="swiper-slide" style="max-width: 350px;">
                     <div class="article-card">
-                        <div class="article-image">🔒</div>
+                        <div class="article-image" style="background-image: url('imagenes/consejos-ciberseguridad.png')"></div>
                         <div class="article-content">
                             <span class="article-category">Seguridad</span>
                             <h3 class="article-title">Ciberseguridad</h3>
                             <p class="article-desc">Consejos y claves para que tu empresa esté protegida contra posibles estafas digitales.</p>
-                            <a href="#" class="article-link">Ver más →</a>
+                            <a href="/article/ciberseguridad" class="article-link">Ver más →</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Article 5 -->
                 <div class="swiper-slide" style="max-width: 350px;">
                     <div class="article-card">
-                        <div class="article-image">📊</div>
+                        <div class="article-image" style="background-image: url('imagenes/panorama-economico.png')"></div>
                         <div class="article-content">
                             <span class="article-category">Economía</span>
                             <h3 class="article-title">Panorama Económico</h3>
                             <p class="article-desc">Conoce nuestra visión y proyecciones para la economía local e internacional actual.</p>
-                            <a href="#" class="article-link">Ver más →</a>
+                            <a href="https://banco.santander.cl/estudios" class="article-link">Ver más →</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Navigation -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
@@ -890,8 +913,16 @@
         </div>
     </footer>
 
-    <!-- SWIPER JS -->
+    <!-- SWIPER JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- JQUERY (DE TUS ARCHIVOS) -->
+    <script src="js/jquery.min.js"></script>
+    
+    <!-- HEADER JS (DE TUS ARCHIVOS) -->
+    <script src="js/header.js"></script>
+    
+    <!-- MAIN SCRIPT -->
     <script>
         // ==================== HERO SWIPER ====================
         const heroSwiper = new Swiper('#heroSwiper', {
@@ -946,13 +977,14 @@
 
         // ==================== UTILITY FUNCTIONS ====================
         function handleLogin() {
-            alert('Redirigiendo a login...');
-            // window.location.href = '/login';
+            window.location.href = 'https://empresas.officebanking.cl/login';
         }
 
         function toggleMobileMenu() {
             const navDesktop = document.querySelector('.nav-desktop');
-            navDesktop.style.display = navDesktop.style.display === 'flex' ? 'none' : 'flex';
+            if (navDesktop) {
+                navDesktop.style.display = navDesktop.style.display === 'flex' ? 'none' : 'flex';
+            }
         }
 
         function scrollToSection(selector) {
@@ -991,20 +1023,11 @@
             });
         });
 
-        // ==================== HEADER SCROLL EFFECT ====================
-        let lastScroll = 0;
-        const header = document.querySelector('.header');
-
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-
-            if (currentScroll > lastScroll && currentScroll > 100) {
-                header.style.boxShadow = '0 2px 12px rgba(0, 0, 0, 0.15)';
-            } else {
-                header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.08)';
-            }
-
-            lastScroll = currentScroll;
+        // ==================== ERROR HANDLING ====================
+        document.querySelectorAll('img').forEach((img) => {
+            img.addEventListener('error', function () {
+                console.warn(`Imagen no encontrada: ${this.src}`);
+            });
         });
     </script>
 </body>
